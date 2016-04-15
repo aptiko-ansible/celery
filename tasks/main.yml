@@ -1,0 +1,12 @@
+---
+- name: Install virtualenv
+  apt: name=python-virtualenv
+
+- name: Install celery
+  apt: name=python-celery
+
+- name: Install supervisor
+  apt: name=supervisor
+
+- name: Ensure supervisor is running
+  service: name=supervisor state=started
